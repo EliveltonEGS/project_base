@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Contact;
 
-use App\Http\Actions\Contacts\{
+use App\Actions\Contacts\{
     DestroyContactAction,
-    FindContactAction,
+    FindContactAction
 };
 use App\Http\Controllers\Controller;
 use App\Trait\Contact\ContactNotFound;

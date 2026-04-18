@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Contact;
 
-use App\Http\Actions\Contacts\FindContactAction;
+use App\Actions\Contacts\FindContactAction;
 use App\Http\Controllers\Controller;
 use App\Trait\Contact\ContactNotFound;
 use Symfony\Component\HttpFoundation\JsonResponse;

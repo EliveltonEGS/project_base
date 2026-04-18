@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Contact;
 
-use App\Http\Actions\Contacts\CreateContactAction;
+use App\Actions\Contacts\CreateContactAction;
 use App\Http\Controllers\Controller;
 use App\Http\DTOs\ContactDTO;
 use App\Http\Requests\Contact\ContactCreateRequest;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Actions\Contacts;
+namespace App\Actions\Contacts;
 
 use Illuminate\Database\Eloquent\Collection;
 

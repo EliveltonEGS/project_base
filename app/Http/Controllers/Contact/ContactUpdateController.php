@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Contact;
 
-use App\Http\Actions\Contacts\{
+use App\Actions\Contacts\{
     FindContactAction,
     UpdateContactAction
 };

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Contact;
 
-use App\Http\Actions\Contacts\AllContactAction;
+use App\Actions\Contacts\AllContactAction;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 
