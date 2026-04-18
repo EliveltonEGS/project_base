@@ -7,9 +7,10 @@ use App\Http\Actions\Contacts\{
     UpdateContactAction
 };
 use App\Http\Controllers\Controller;
+use App\Http\DTOs\ContactDTO;
+use App\Http\Requests\Contact\ContactUpdateRequest;
 use App\Trait\Contact\ContactNotFound;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class ContactUpdateController extends Controller
 {
@@ -20,13 +21,15 @@ class ContactUpdateController extends Controller
         private FindContactAction $findAction
     ) {}
 
-    public function __invoke(int $id, Request $request): JsonResponse
+    public function __invoke(ContactUpdateRequest $request, int $id): JsonResponse
     {
-        if (!$this->findAction->execute($id)) {
+        $dto = ContactDTO::makeFromArray($request->validated(), $id);
+
+        if (!$this->findAction->execute($dto->id)) {
             return response()->json(ContactNotFound::contactNotFound(), 404);
         }
 
-        $contact = $this->updateAction->execute($id, $request->only('name', 'email'));
+        $contact = $this->updateAction->execute($dto);
 
         return response()->json($contact, 201);
     }

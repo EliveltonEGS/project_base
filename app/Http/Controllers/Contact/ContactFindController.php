@@ -13,7 +13,7 @@ class ContactFindController extends Controller
 
     public function __construct(private FindContactAction $findAction) {}
 
-    public function __invoke(?int $id = null): JsonResponse
+    public function __invoke(int $id): JsonResponse
     {
         $contact = $this->findAction->execute($id);
 
