@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\DTOs;
+namespace App\DTOs;
 
 class ContactDTO
 {

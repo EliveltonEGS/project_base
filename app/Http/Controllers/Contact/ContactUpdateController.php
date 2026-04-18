@@ -7,7 +7,7 @@ use App\Actions\Contacts\{
     UpdateContactAction
 };
 use App\Http\Controllers\Controller;
-use App\Http\DTOs\ContactDTO;
+use App\DTOs\ContactDTO;
 use App\Http\Requests\Contact\ContactUpdateRequest;
 use App\Trait\Contact\ContactNotFound;
 use Illuminate\Http\JsonResponse;

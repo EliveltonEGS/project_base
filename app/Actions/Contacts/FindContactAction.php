@@ -2,6 +2,7 @@
 
 namespace App\Actions\Contacts;
 
+use App\Actions\Contacts\ContactBaseAction;
 use App\Models\Contact;
 
 class FindContactAction extends ContactBaseAction

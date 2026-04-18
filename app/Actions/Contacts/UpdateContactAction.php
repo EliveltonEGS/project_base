@@ -2,7 +2,7 @@
 
 namespace App\Actions\Contacts;
 
-use App\Http\DTOs\ContactDTO;
+use App\DTOs\ContactDTO;
 use App\Models\Contact;
 
 class UpdateContactAction extends ContactBaseAction
